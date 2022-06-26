@@ -20,6 +20,19 @@ screen.appendChild(display);
 
 const buttons = document.querySelectorAll(".grid-item");
 
+
+
+
+/* Upon reading, eval() function should be avoided at any cost
+but due to my lack of knowledge, I'm only able to solve this project
+while using eval().
+
+Read more about it here: https://www.digitalocean.com/community/tutorials/js-eval
+
+*/
+
+
+
 buttons.forEach((button) => {
     button.addEventListener("click", function () {
         if (button.innerHTML === "AC") {
