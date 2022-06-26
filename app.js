@@ -18,7 +18,6 @@ we add display to smaller div(screen) */
 container.appendChild(screen);
 screen.appendChild(display);
 
-
 const buttons = document.querySelectorAll(".grid-item");
 
 buttons.forEach((button) => {
