@@ -5,24 +5,43 @@ body {
     margin: 0px;
     height: 100%;
     background-color: yellow;
+    font-family: 'Roboto', sans-serif;
 }
 
 .main {
     display: flex;
     justify-content: center;
     height: 100%;
+    flex-direction: column;
+    align-items: center;
 }
+
 
 .calculator {
     background-color: black;
     position: relative;
     top: 15px;
     border-radius: 15px;
-
     width: 400px;
-    height: 900px;
+    height: 850px;
     border-radius: 40px;
     border: 6px solid #eee;
+
+}
+
+.screen {
+    height: 200px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.screen .screen-text{
+    font-size: 40px;
+    position: absolute;
+    right: 15px;
+    top: 220px;
 
 }
 
@@ -66,24 +85,50 @@ body {
 
 .battery {
     right: 0px
-}
-
-h1,
-h3,
-p {
-    font-family: 'Roboto', sans-serif;
+}   
+h1, p {
     color: white;
 }
 
 h1 {
-    font-family: 'Roboto', sans-serif;
     font-size: 55px;
     margin: 0;
 }
 
-h3 {
-    margin: 0;
-    font-size: 45px;
-    text-align: right;
-    padding: 15px;
+.grid-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 20px;
+    position: absolute;
+    left: 10px;
+    bottom: 35px;
+}
+
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    border: 1px solid;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 50px;
+    font-size: 25px;
+}
+
+.grid-buttons #number {
+    color: white;
+    background-color: gray;
+}
+
+.grid-buttons #operators {
+    color: white;
+    background-color: orange;
+}
+
+button:hover {
+    border: 2px;
 }
